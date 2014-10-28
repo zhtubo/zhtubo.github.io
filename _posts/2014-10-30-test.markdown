@@ -1,0 +1,6 @@
+---
+layout: post
+categories: other
+title: "test st submit"
+---
+test st submit
