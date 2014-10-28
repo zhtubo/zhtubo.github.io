@@ -111,11 +111,11 @@ a {
   overflow: hidden;
   display: block; }
   #avatar:hover {
-    -webkit-animation: spin .03s linear infinite;
-    -moz-animation: spin .03s linear infinite;
-    -ms-animation: spin .03s linear infinite;
-    -o-animation: spin .03s linear infinite;
-    animation: spin .03s linear infinite; }
+    -webkit-animation: spin .35s linear 3;/*infinite*/
+    -moz-animation: spin .35s linear 3;
+    -ms-animation: spin .35s linear 3;
+    -o-animation: spin .35s linear 3;
+    animation: spin .35s linear 3; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     #avatar {
       background: url(/assets/img/zhtubo@2X.png);
