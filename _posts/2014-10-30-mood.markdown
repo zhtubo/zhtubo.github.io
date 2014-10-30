@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "本博今天起正式使用3ks.info域名"
-categories:life
+categories: life
 ---
 
 #####本博今天起正式使用 __3ks.info__ 域名#####
