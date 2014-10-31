@@ -1,0 +1,130 @@
+---
+title: "Xcode快捷鍵"
+categories: ios
+layout:post
+---
+ ###快捷键:
+
+control+command+空格  插入特殊字符
+
+command+shift+R     打开控制台
+
+command+W             关闭控制台（谁有焦点就关闭谁）
+
+command+R              编译并运行程序 Build and Go
+
+command+shif+E      打开或关闭File Name视图
+
+command+[或]          把选定的多行代码或光标所在行的代码，左移或右移
+
+command+L              跳到某行
+
+ 
+
+###调试快捷键：
+
+command+shift+Y     打开调试窗口
+
+command+Y                   调试运行程序
+
+command+option+P      继续
+
+command+shift+O        跳过
+
+command+shift+I         进入
+
+command+shift+T        跳出
+
+ 
+###方向快捷键：
+
+以下快捷键在Cocoa的文本域内都好使，如Xcode,TextEdit,Safari,Pages,Keynote的文本域中。
+
+contorl+F:光标右移，同右箭头
+
+contorl+B:光标左移，同左箭头
+
+contorl+P:同上箭头
+
+contorl+N:同下箭头
+
+contorl+A:移动到行首，同command+左箭头
+
+contorl+E:移动到行尾，同command+右箭头
+
+contorl+T:左右交换光标两边的符号
+
+contorl+D:删除光标右边的一个字符，同fn+delete
+
+contorl+K:删除光标后的一行内的代码
+
+contorl+L:将插入点置于窗口正中
+
+ 
+
+###代码导航：
+
+command+shift+D  打开Open Quidkly窗口，可用于快速打开一个文件，而不用到文件树中目视查找。
+
+头文件(＃import *.h这里)获得光标，再按shift+command+D,弹出一个窗口，可跟入一个头文件
+
+shift+command+D,弹出一个窗口，输入头文件名字可跟入一个头文件
+
+alt+command+上箭头  查看配套文件，为当前的.m文件查看.h文件，或返过来。
+
+option+command+左箭头  代码折叠（折叠区先获得光标）
+
+option+command+右箭头  代码反折叠（折叠区先获得光标）
+
+
+###查找与替换：
+
+command+F              在当前文件中的查找
+
+shift+command+F     在当前项目中查找
+
+###重构快捷键--修改类名：
+
+选中类名，（光标在类名字母中就行，全选中也可以），按shift+command+J键，
+
+出现一个新窗口，输入新名字。可以勾选Snaplhot，修改类名时，Rename related files也会被选中。
+
+可以Preview(预览)，看看影响到了哪些类，还可以单个文件对比。
+
+对应的主菜单是：Edit->Refactor
+
+
+###代码自完成：
+
+输入变量名和方法名的前几个字母时，IDE会给予提示，这时候你可以：
+
+tab 确认
+
+esc 显示代码提示菜单，其中包含所以可能可能匹配相。E:枚举,f:函数,＃:＃define指令,m:方法,C:类
+
+control+.    在各个代码提示选项之间循环，作用等同于esc键，只是外观不同。
+
+shift+control+. 同上，但是反相循环
+
+
+如果代码自动完成没有出来，你可以使用esc键呼出他。
+
+
+代码自动完成方法提示时，如上图，有两个参数，在输入完第一个参数，如何光标定位到下一个参数：
+
+tab               移动到代码提示的下一个点位符
+
+contorl +/     移动到代码提示的下一个点位符
+
+
+###代码快照：
+
+主菜单：File->Create Snapshot 会记住当前代码的状态，现在你可以“破坏”你的代码了
+
+主菜单：File->Restore Snapshot 打开快照窗口，这里可以进行恢复项目工作
+
+ 
+
+###帮助快捷键：
+
+Option+双击某个类或变量，弹出文档窗口，右上角在书的图标，h图标
