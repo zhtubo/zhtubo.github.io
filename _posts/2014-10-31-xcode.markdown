@@ -1,9 +1,10 @@
 ---
 title: "Xcode快捷鍵"
 categories: ios
-layout:post
+layout: post
 ---
- ###快捷键:
+
+###快捷键:
 
 control+command+空格  插入特殊字符
 
