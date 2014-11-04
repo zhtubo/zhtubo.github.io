@@ -8,3 +8,5 @@ categories: ios
 凡事先動手再說，雖然說以adaptive屬於剛入門的級別，但還是有信心繼續學好。
 
 今晚繼學習stanford ios7的教程，給自己打打氣，加油。
+
+分享一下XCODE6自動布局教程地址：[Beginning Adaptive Layout Tutorial](http://www.raywenderlich.com/83276/beginning-adaptive-layout-tutorial)
