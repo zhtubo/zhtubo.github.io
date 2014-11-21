@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "Merge Into"
+title:  "Merge Into"
 categories: database
 ---
-
 
 ####用途 ####
 merge 命令可以用来用一个表中的数据来修改或者插入到另一个表。插入或者修改的操作取决于on子句的条件。 
