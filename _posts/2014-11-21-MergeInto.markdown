@@ -78,7 +78,7 @@ employee_id bonus
 
 163 100 
 
-```javascript
+```sql
 merge into bonuses d 
 
 using (select employee_id, salary, department_id from employees 
