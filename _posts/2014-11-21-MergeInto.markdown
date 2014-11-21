@@ -41,7 +41,7 @@ merge_insert子句执行当不符合on子句条件时，往目标表中插入数
 范例 
 merge 范例 
 下面的例子在oe模式下创建一个bonuses表，bonus的缺省值为100。然后插入bonuses表所有有成绩的销售人员（基于oe_orders 表的sqles_rep_id字段）。最后，人力资源管理人员决定，所有的人员将得到分红。没有销售成绩的员工得到工资的1%的分红，而那些有销售成绩的员工将得到缺省分红以及工资的1%。可以用一条merge语句将完成上述修改： 
-```c
+```sql
 create table bonuses (employee_id number, bonus number default 100); 
 
 insert into bonuses(employee_id) 
@@ -129,7 +129,7 @@ employee_id bonus
 169 100
  
 在ibatis应用中的一个例子:
-```c
+```sql
 <update id="mergeAdoptDept" parameterClass="adoptDept">
     MERGE INTO ADMIN_J230_DEPT DEPT
    USING (    
