@@ -3,7 +3,12 @@ layout: post
 title:  "IOS中ARC與非ARC的調用"
 categories: ios
 ---
+
+
 在ARC項目中使用非ARC的解決辦法：
+
     在target裏的build phases中，找到compile sources,把涉及到非arc的類，在後面加上：-fno-objc-arc
+    
 在非ARC的項目使用ARC:
+
     方法同上，只不過關鍵字為：-fobjc-arc
