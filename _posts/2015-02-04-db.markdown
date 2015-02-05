@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Sql2008清空日志"
+date:   2015-02-04
+categories: database
+---
+
+在sql server2005中，我們可以這樣清理日志
+```
+dump transaction dbName with no_log
+```
+現在sql2008中會報語法錯誤了，要用如下方法來做了
+```
+alter database dbName set recovery simple
+alter database dbName set recovery full
+dbcc shrinkdatabase(dbName,0)
+```
