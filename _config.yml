@@ -1,2 +1,5 @@
-highlighter: pygments
-markdown: kramdown
+markdown: rdiscount
+url: http://www.3ks.info
+author: Evan tu
+pygments: true
+paginate: 28
