@@ -79,7 +79,7 @@ a {
       transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1); } }
   @media screen and (max-width: 585px) {
     #sidebar {
-      width: 100%; } }
+      display: none } }
 
 /*---------------------------------*\
    Tags
@@ -122,6 +122,24 @@ a {
       -webkit-background-size: 100px 100px;
       -moz-background-size: 100px 100px;
       background-size: 100px 100px; } }
+
+	#mobileIcon:hover {
+    -webkit-animation: spin .35s linear 2;/*infinite*/
+    -moz-animation: spin .35s linear 2;
+    -ms-animation: spin .35s linear 2;
+    -o-animation: spin .35s linear 2;
+    animation: spin .35s linear 2; }
+  @media screen and (max-width: 585px) {
+    #mobileIcon {
+      width: 80px;
+      height: 50px;
+      background: url(/assets/img/zhtubo.png);
+      border-radius: 80%;
+      box-shadow: 0 0 0px 4px white, 0 0 4px 4px #ccc;
+      overflow: hidden;
+      display: block;
+   } }
+
 
 #tags__ul {
   margin: 0;
@@ -287,8 +305,6 @@ a {
   text-shadow: -1px 1px 0 rgba(125, 139, 153, 0.1);
   overflow-x: hidden;
   overflow-y: auto;
-  position: absolute;
-  top: 65px;
   bottom: 0;
   left: 0;
   right: -1px;

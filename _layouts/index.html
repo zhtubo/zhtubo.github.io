@@ -32,11 +32,7 @@
       </nav> <!-- end #tags -->
 
       <div id="posts-list">
-        <form action="" id="search-form">
-          <a href="/index.html" id="mobile-avatar"></a>
-          <!-- NOTE: input field is disabled by default -->
-          <input id="search-input" type="text" placeholder="Search..." disabled >
-        </form>
+          <span id="mobileIcon"></span>
 
         <nav id="pl__container">
         {% for post in site.posts %}
@@ -50,13 +46,6 @@
       <div id="pjax">
         {{ content }}
       </div> <!-- end #pjax -->
-
-      <div id="post__toc-trigger">
-        <div id="post__toc">
-          <span id="post__toc-title">Table of Contents</span>
-          <ul id="post__toc-ul"></ul>
-        </div>
-      </div>
     </div> <!-- end #post -->
 
     <button id="js-fullscreen"><span id="icon-arrow" class="fontello"></span></button>
