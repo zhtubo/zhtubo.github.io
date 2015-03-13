@@ -1,4 +1,5 @@
 markdown: rdiscount
+highlighter: pygments
 url: http://www.3ks.info
 author: Evan tu
 pygments: true
