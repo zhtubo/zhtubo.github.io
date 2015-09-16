@@ -4,12 +4,34 @@ title:  "Unicode字符轉換"
 date:   2015-09-16
 categories: database
 ---
-
+<style>
+textarea{width:500px;height:200px;}
+</style>
 <script>
-function test()
-{
-    alert("hello");
+function SetEncode(str){
+    var result=[];
+    for(var x=0;x<str.length;x++){
+        result[x]=("00"+str.charCodeAt(x).toString(16)).slice(-4);
+    }
+    return "\\u" + result.join("\\u");
+}
+
+function SetDecode(str){
+    var result=str.replace(/\\/g,"%");
+    return unescape(result);
+}
+
+function OperatorMode(mode){
+    var objSource=document.getElementById("txtSource"),
+        objResult = document.getElementById("txtResult");
+    objResult.value=Boolean(model)?SetEncode(objSource.value):SetDecode(objSource.value);
 }
 </script>
+   
 
-<input type="button" value="點我" onclick="test();"/>
+近來因為需要時常Unicode編碼，所以直接寫了個JS編解碼的放這里了，方便自己使用。
+
+<textarea id="txtSource" placeholder="要編碼/解碼的文字"></textarea>
+<input type="button" value=" 編 碼 " onclick="OperatorMode(1);"/>
+<input type="button" value=" 解 碼 " onclick="OperatorMode(0);"/>
+<textarea id="txtResult" placeholder="編碼/解碼的結果"></textarea>
