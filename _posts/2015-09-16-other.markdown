@@ -4,9 +4,7 @@ title:  "Unicode字符轉換"
 date:   2015-09-16
 categories: database
 ---
-<style>
-textarea{width:500px;height:200px;}
-</style>
+
 <script>
 function SetEncode(str){
     var result=[];
@@ -24,14 +22,16 @@ function SetDecode(str){
 function OperatorMode(mode){
     var objSource=document.getElementById("txtSource"),
         objResult = document.getElementById("txtResult");
-    objResult.value=Boolean(model)?SetEncode(objSource.value):SetDecode(objSource.value);
+    objResult.value=Boolean(mode)?SetEncode(objSource.value):SetDecode(objSource.value);
 }
 </script>
    
 
 近來因為需要時常Unicode編碼，所以直接寫了個JS編解碼的放這里了，方便自己使用。
 
-<textarea id="txtSource" placeholder="要編碼/解碼的文字"></textarea>
+<textarea id="txtSource" placeholder="要編碼/解碼的文字" cols="80" rows="10"></textarea>
+
 <input type="button" value=" 編 碼 " onclick="OperatorMode(1);"/>
 <input type="button" value=" 解 碼 " onclick="OperatorMode(0);"/>
-<textarea id="txtResult" placeholder="編碼/解碼的結果"></textarea>
+
+<textarea id="txtResult" placeholder="編碼/解碼的結果" cols="80" rows="10"></textarea>
