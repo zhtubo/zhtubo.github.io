@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Unicode字符轉換"
+date:   2015-09-16
+categories: database
+---
+
+<script type="javascript/text">
+function test()
+{
+    alert("hello");
+}
+</script>
+
+<input type="button" value="點我" onclick="test();"/>
