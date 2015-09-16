@@ -5,7 +5,7 @@ date:   2015-09-16
 categories: database
 ---
 
-<script type="javascript/text">
+<script>
 function test()
 {
     alert("hello");
