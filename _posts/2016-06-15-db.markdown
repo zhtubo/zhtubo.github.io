@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "簡單統計sqlserver表數據大小"
+date:   2016-06-15
+categories: database
+---
+
+##簡單統計SQLSERVER用戶數據表大小(包括記錄總數和空間佔用情況)
+在SQLSERVER，簡單的組合sp_spaceused和sp_MSforeachtable這兩個存儲過程，可以方便的統計出用戶數據表的大小，包括記錄總數和空間佔用情況，非常實用，在SqlServer2K和SqlServer2005中都測試通過。
+
+```sql
+/*
+/*
+1. exec sp_spaceused '表名'            （SQL統計數據，大量事務操作後可能不准）
+2. exec sp_spaceused '表名', true       (更新表的空間大小，準確的表空大小，但可能會花些統計時間）
+3. exec sp_spaceused                    (數據庫大小查詢）
+4. exec sp_MSforeachtable "exec sp_spaceused '?'"     (所有用戶表空間表小，SQL統計數據，，大量事務操作後可能不准）
+5. exec sp_MSforeachtable "exec sp_spaceused '?',true"    (所有用戶表空間表小，大數據庫慎用）
+*/
+
+create table #t(name varchar(255), rows bigint, reserved varchar(20), data varchar(20), index_size varchar(20), unused varchar(20))
+exec sp_MSforeachtable "insert into #t exec sp_spaceused '?'" 
+select * from #t order by cast(left(data,len(data)-3) as int) desc
+drop table #t
+```
+
+另外還有sp_MSforeachdb可以遍歷所有數據庫，使用方法詳見SQL幫助。
