@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "解决npm安装puppeteer时Chromium下载失败的问题"
+title:  "解决安装puppeteer时Chromium下载失败的问题"
 date:   2018-07-27
 categories: NodeJs
 ---
@@ -9,15 +9,12 @@ categories: NodeJs
 可用npm的命令 npm config edit 来查看配置情况
 
 ```当前我mac下的~/.npmrc的配置项如下
-/*
-/*
+
 registry=https://registry.npm.taobao.org/
 sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
-electron_mirror="https://npm.taobao.org/mirrors/electron/
-PUPPETEER_DOWNLOAD_HOST=https://storage.googleapis.com.cnpmjs.org   
-;注意了，上面这行配置才是关键，指定puppeteer的下载路径
-*/
+electron_mirror=https://npm.taobao.org/mirrors/electron/
+PUPPETEER_DOWNLOAD_HOST=https://storage.googleapis.com.cnpmjs.org 
 
 ```
+相信上面这几行配置估计大家都比较熟翻，最为关键的就是最后一行指定下载Chromium的路径
 
-windows下的配置基本差不多。
