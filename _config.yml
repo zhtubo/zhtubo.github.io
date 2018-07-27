@@ -1,6 +1,6 @@
 markdown: rdiscount
 highlighter: pygments
-url: http://www.3ks.info
+url: http://blog.keepkeep.cc
 author: Evan tu
 pygments: true
 paginate: 28
