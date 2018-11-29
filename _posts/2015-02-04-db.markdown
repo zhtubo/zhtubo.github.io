@@ -15,6 +15,6 @@ dump transaction dbName with no_log
 
 ```
 alter database dbName set recovery simple
-alter database dbName set recovery full
 dbcc shrinkdatabase(dbName,0)
+alter database dbName set recovery full
 ```
